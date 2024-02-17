@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="index.css" rel="stylesheet">
+  <link rel="stylesheet" href="app.scss">
+  <title>Measurement Form</title>
+
+
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: rgba(192, 225, 243, 5.185);
+      margin: 20px;
+      padding: 20px;
+      color: rgba(19, 25, 23, 5.185);
+    }
+
+    form {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: rgba(0, 51, 94, 0.97);
+      border-radius: 4px;
+      overflow: visible;
+      box-shadow: 0 0 10px rgb(0, 0, 0);
+    }
+
+    /* Table Styling */
+    table {
+      color: rgba(255, 231, 213, 100);
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+
+    }
+
+
+    /* Image Styling */
+    img {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: 0 auto;
+      overflow: visible;
+      transition: transform 0.3s ease-in-out;
+      /* Added transition for smooth zoom effect */
+    }
+
+    img:hover {
+      transform: scale(3.6);
+
+      /* Increase the scale on hover for zoom effect */
+    }
+
+    /* Input and Textarea Styling */
+    input[type="text"],
+    textarea {
+      color: black;
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    /* Submit Button Styling */
+    input[type="submit"] {
+      background-color: #e24242b4;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a030;
+      box-shadow: 0 0 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <script src="index.js"></script>
+
+
+  <div class="flex">
+    <form action="/submit" method="post">
+      <table>
+        <tr>
+          <th></th>
+          <th>Measurement Type</th>
+          <th>Measurement Value (inches)</th>
+          <th></th>
+          <th>Measurement Type</th>
+          <th>Measurement Value (inches)</th>
+        </tr>
+        <tr>
+          <td><img src="https://i.postimg.cc/G2LsVWC2/Neck-Full-Chest.jpg" alt="Neck Image"></td>
+          <td>Neck</td>
+          <td><input type="text" name="neck_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/fWxRm2nq/Right-Full-Sleeve-Left-Full-Sleeve.jpg" alt="Right Sleeve Image">
+          </td>
+          <td>Right Sleeve</td>
+          <td><input type="text" name="right_sleeve_measurement" /> inches</td>
+        </tr>
+        <tr>
+          <td><img src="https://i.postimg.cc/hjjMHSNy/Trouser-Waist-Trouser-Outseem.jpg" alt="Trouser Waist Image"></td>
+          <td>Trouser Waist</td>
+          <td><input type="text" name="trouser_waist_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/XJ6GMxZr/Full-Back-Half-Back.jpg" alt="Half Back Length Image"></td>
+          <td>Half Back Length</td>
+          <td><input type="text" name="half_back_length_measurement" /> inches</td>
+        </tr>
+
+        <tr>
+          <td><img src="https://i.postimg.cc/G2LsVWC2/Neck-Full-Chest.jpg" alt="Full Chest Image"></td>
+          <td>Full Chest</td>
+          <td><input type="text" name="full_chest_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/284Jd5Yh/Bicep-Wrist.jpg" alt="Bicep Image"></td>
+          <td>Bicep</td>
+          <td><input type="text" name="bicep_measurement" /> inches</td>
+        </tr>
+        <tr>
+          <td><img src="https://i.postimg.cc/hjjMHSNy/Trouser-Waist-Trouser-Outseem.jpg" alt="Trousers Outseam Image">
+          </td>
+          <td>Trousers Outseam</td>
+          <td><input type="text" name="trousers_outseam_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/rpzQHVBh/Front-Jacket-Length-Front-Chest-Width.jpg"
+              alt="Front Jacket Length Image"></td>
+          <td>Front Jacket Length</td>
+          <td><input type="text" name="front_jacket_length_measurement" /> inches</td>
+        </tr>
+        <tr>
+          <td><img src="https://i.postimg.cc/RFgCZTsC/Waist-Stomach-Hips-Seat.jpg" alt="Waist/Stomach Image"></td>
+          <td>Waist/Stomach</td>
+          <td><input type="text" name="waist_stomach_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/284Jd5Yh/Bicep-Wrist.jpg" alt="Wrist Image"></td>
+          <td>Wrist</td>
+          <td><input type="text" name="wrist_measurement" /> inches</td>
+        </tr>
+        <tr>
+          <td><img src="https://i.postimg.cc/wBJsMnLq/Trouser-Inseem-Crotch.jpg" alt="Trousers Inseam Image"></td>
+          <td>Trousers Inseam</td>
+          <td><input type="text" name="trousers_inseam_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/rpzQHVBh/Front-Jacket-Length-Front-Chest-Width.jpg"
+              alt="Front Chest Width Image"></td>
+          <td>Front Chest Width</td>
+          <td><input type="text" name="front_chest_width_measurement" /> inches</td>
+        </tr>
+        <tr>
+          <td><img src="https://i.postimg.cc/RFgCZTsC/Waist-Stomach-Hips-Seat.jpg" alt="Hips/Seat Image"></td>
+          <td>Hips/Seat</td>
+          <td><input type="text" name="hips_seat_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/vBnRpLJS/Back-Width-Half-Shoulder-Width-R.jpg"
+              alt="Half Shoulder Width (Right) Image"></td>
+          <td>Half Shoulder Width (Right)</td>
+          <td><input type="text" name="half_shoulder_width_measurement" /> inches</td>
+        </tr>
+        <tr>
+          <td><img src="https://i.postimg.cc/vBnRpLJS/Back-Width-Half-Shoulder-Width-R.jpg"
+              alt="Half Shoulder Width (Left) Image"></td>
+          <td>Half Shoulder Width (Left)</td>
+          <td><input type="text" name="half_shoulder_width_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/fWxRm2nq/Right-Full-Sleeve-Left-Full-Sleeve.jpg"
+              alt="Left Full Sleeve Image"></td>
+          <td>Left Full Sleeve</td>
+          <td><input type="text" name="left_full_sleeve_measurement" /> inches</td>
+        </tr>
+        <tr>
+          <td><img src="https://i.postimg.cc/vBnRpLJS/Back-Width-Half-Shoulder-Width-R.jpg"
+              alt="Full Shoulder Width Image"></td>
+          <td>Full Shoulder Width</td>
+          <td><input type="text" name="full_shoulder_width_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/VNRgcBxV/Thigh-Knee.jpg" alt="Thigh Image"></td>
+          <td>Thigh</td>
+          <td><input type="text" name="thigh_measurement" /> inches</td>
+        </tr>
+        <tr>
+          <td><img src="https://i.postimg.cc/fWxRm2nq/Right-Full-Sleeve-Left-Full-Sleeve.jpg"
+              alt="Right Full Sleeve Image"></td>
+          <td>Right Full Sleeve</td>
+          <td><input type="text" name="right_full_sleeve_measurement" /> inches</td>
+          <td><img src="https://i.postimg.cc/VNRgcBxV/Thigh-Knee.jpg" alt="Knee Image"></td>
+          <td>Knee</td>
+          <td><input type="text" name="knee_measurement" /> inches</td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit"></td>
+          <td colspan="2">Your Message (optional)</td>
+          <td colspan="2"><textarea name="user_message" rows="4" cols="50"></textarea></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  </div>
+</body>
+
+
+</html>
